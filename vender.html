@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bBad</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<style>
+    .gradeShop button {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: green;
+        color: aliceblue;
+    }
+
+    img {
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+
+    <img class="fundo" src="imagens/Splash.jpeg" alt="">
+
+
+    <div class="opcao">
+        <a href="principal.html">
+            <h1>Voltar</h1>
+        </a>
+    </div>
+
+    <!------------------------------------------------>
+    <script>
+
+        const membrosMenuVendas = [
+            /*
+            Nome
+            Foto
+            multiplicador_Rep_Normal
+            multiplicador_Dinheiro_Normal
+            multiplicador_Rep_Azul
+            multiplicador_Dinheiro_Azul
+            stats do desbloqueio
+            */
+            ['Crazy8', 'Crazy8.jpeg', '2', '100', '5', '300', 'desbloqueou_personagem_Crazy8'],
+            ['Tuco', 'Tuco.jpg', '2', '100', '5', '300', 'desbloqueou_personagem_Tuco'],
+            ['Jack', 'Jack.jpeg', '2', '100', '5', '300', 'desbloqueou_personagem_Jack'],
+            ['Gaff', 'Gaff.jpg', '2', '100', '5', '300', 'desbloqueou_personagem_Gaff'],
+            ['Eladio', 'Don.jpeg', '2', '100', '5', '300', 'desbloqueou_personagem_Don'],
+            ['Gus', 'Gus.jpeg', '2', '100', '5', '300', 'desbloqueou_personagem_Gus'],
+        ];
+
+        for (let index = 0; index < membrosMenuVendas.length; index++) {
+            document.body.innerHTML +=`
+            <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_${membrosMenuVendas[index][0]}" src="imagens/Vendedores/${membrosMenuVendas[index][1]}"></td>
+                <td style="width: 50%;">
+                    <h2 style="color:aliceblue ;">
+                        ${membrosMenuVendas[index][0]}
+                    </h2>
+                    <span style="color:aliceblue ;" id="desc_${membrosMenuVendas[index][0]}">
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </td>
+                <td style="width: 25%;">
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_${membrosMenuVendas[index][0]}1">
+                            R$ 50.00
+                        </span>
+                        <button style="width:100%;" id="bt_${membrosMenuVendas[index][0]}1">
+                            Vender Cristal
+                        </button>
+                    </center>
+                </td>
+                <td style="width: 25%;">
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_${membrosMenuVendas[index][0]}2">
+                            R$ 50.00
+                        </span>
+                        <button style="width:100%;" id="bt_${membrosMenuVendas[index][0]}2">
+                            Vender Cristal Azul
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+            `;
+        }
+    </script>
+
+    <!------------------------------------------------>
+
+    <!------------------------------------------------>
+
+    <!------------------------------------------------>
+
+
+
+</body>
+<script src="js.js"></script>
+
+<script>
+
+
+for (let index = 0; index < membrosMenuVendas.length; index++) {
+    
+    
+   
+    eval(`
+    var ${membrosMenuVendas[index][0]}_multiplicador_Rep_Normal = ${membrosMenuVendas[index][2]};
+    var ${membrosMenuVendas[index][0]}_multiplicador_Dinheiro_Normal = ${membrosMenuVendas[index][3]};
+    var ${membrosMenuVendas[index][0]}_multiplicador_Rep_Azul = ${membrosMenuVendas[index][4]};
+    var ${membrosMenuVendas[index][0]}_multiplicador_Dinheiro_Azul = ${membrosMenuVendas[index][5]};
+    
+
+    const foto_${membrosMenuVendas[index][0]} = document.getElementById('foto_${membrosMenuVendas[index][0]}');
+    const preco_${membrosMenuVendas[index][0]}1 = document.getElementById('preco_${membrosMenuVendas[index][0]}1');
+    const bt_${membrosMenuVendas[index][0]}1 = document.getElementById('bt_${membrosMenuVendas[index][0]}1');
+    const preco_${membrosMenuVendas[index][0]}2 = document.getElementById('preco_${membrosMenuVendas[index][0]}2');
+    const bt_${membrosMenuVendas[index][0]}2 = document.getElementById('bt_${membrosMenuVendas[index][0]}2');
+    const desc_${membrosMenuVendas[index][0]} = document.getElementById('desc_${membrosMenuVendas[index][0]}');
+
+
+    bt_${membrosMenuVendas[index][0]}1.addEventListener('click', () => {//normal
+        var metNormal = parseInt(localStorage.getItem('estoque_meth_normal'));
+        localStorage.setItem('estoque_meth_normal', '0');
+        addReputacao(metNormal * ${membrosMenuVendas[index][0]}_multiplicador_Rep_Normal);
+        addVendas(1);
+        addDinheiro(metNormal * ${membrosMenuVendas[index][0]}_multiplicador_Dinheiro_Normal);
+        msgOk('Produto vendido com sucesso');
+
+    });
+    bt_${membrosMenuVendas[index][0]}2.addEventListener('click', () => {//azul
+        var metNormal = parseInt(localStorage.getItem('estoque_meth_azul'));
+        localStorage.setItem('estoque_meth_azul', '0');
+        addReputacao(metNormal * ${membrosMenuVendas[index][0]}_multiplicador_Rep_Azul);
+        addVendas(1);
+        addDinheiro(metNormal * ${membrosMenuVendas[index][0]}_multiplicador_Dinheiro_Azul);
+        msgOk('Produto vendido com sucesso');
+    });
+
+
+    `);
+}
+
+
+    
+
+
+
+
+    
+
+
+
+    //---------------------------------------------
+   
+
+
+    //---------------------------------------------
+
+
+
+
+
+
+    verCompras();
+
+
+
+
+
+    //---------------------------------------------------
+    function verCompras() {
+
+        for (let index = 0; index < membrosMenuVendas.length; index++)
+        {
+            eval(`
+            if (parseInt(localStorage.getItem('${membrosMenuVendas[index][6]}')) === 1) {
+            foto_${membrosMenuVendas[index][0]}.style.border = '3px solid lime';
+
+            if (parseInt(localStorage.getItem('estoque_meth_normal')) >= 1) {
+
+                var metNormal = parseInt(localStorage.getItem('estoque_meth_normal'));
+                preco_${membrosMenuVendas[index][0]}1.innerHTML = 'R$ ' + (metNormal * ${membrosMenuVendas[index][0]}_multiplicador_Dinheiro_Normal);
+            }
+            else {
+                bt_${membrosMenuVendas[index][0]}1.remove();
+                preco_${membrosMenuVendas[index][0]}1.remove();
+            }
+            //---------------
+            if (parseInt(localStorage.getItem('estoque_meth_azul')) >= 1) {
+                var metAzul = parseInt(localStorage.getItem('estoque_meth_azul'))
+                preco_${membrosMenuVendas[index][0]}2.innerHTML = 'R$ ' + (metAzul * ${membrosMenuVendas[index][0]}_multiplicador_Dinheiro_Azul);
+            }
+            else {
+                bt_Crazy82.remove();
+                preco_Crazy82.remove();
+            }
+            //----------
+
+            desc_${membrosMenuVendas[index][0]}.innerHTML = 'Cristal Pronto: ' + localStorage.getItem('estoque_meth_normal') + '<br>Cristal Azul Pronto: ' + localStorage.getItem('estoque_meth_azul');
+
+
+        }
+        else {
+            bt_${membrosMenuVendas[index][0]}1.remove();
+            bt_${membrosMenuVendas[index][0]}2.remove();
+            preco_${membrosMenuVendas[index][0]}1.remove();
+            preco_${membrosMenuVendas[index][0]}2.remove();
+            
+            foto_${membrosMenuVendas[index][0]}.style.filter = 'grayscale(1)';
+            desc_${membrosMenuVendas[index][0]}.innerHTML = 'Recrute esse personagem, para liberar como vendedor';
+        }
+            `);
+        }
+
+        
+
+
+
+
+    }
+
+
+
+
+    setInterval(() => {
+        verCompras();
+    }, 1000);
+
+
+
+
+    function msgOk(msg) {
+        msgbox('Sucesso', msg);
+    }
+    function msgErro(msg) {
+        msgbox('Erro', msg, 1000, 0, 'red');
+    }
+
+</script>
+
+</html>

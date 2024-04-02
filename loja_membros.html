@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bBad</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<style>
+    .gradeShop button {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: green;
+        color: aliceblue;
+    }
+
+    img {
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+
+    <img class="fundo" src="imagens/Splash.jpeg" alt="">
+
+
+    <div class="opcao">
+        <a href="loja.html">
+            <h1>Voltar</h1>
+        </a>
+    </div>
+
+    <!------------------------------------------------>
+    <script>
+
+        const listaMembros = [
+            { Nome: 'Badger'  ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Clovis'  ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Combo'   ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Crazy8'  ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Don'     ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Gaff'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Gale'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Gus'     ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Huel'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Jack'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Jessy'   ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Kenny'   ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Kuby'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Larry'   ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Lydia'   ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Marco'   ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Mike'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Saul'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Skinny'  ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Skyler'  ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Spooge'  ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Todd'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Tortuga' ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Tuco'    ,Preco:'100',RP:'100', Descricao:'bla' },
+            { Nome: 'Tyrus'   ,Preco:'100',RP:'100', Descricao:'bla' },
+        ];
+
+        listaMembros.forEach(element => {
+            document.body.innerHTML += `
+            <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_${element.Nome}" 
+                    src="imagens/Personagens/${element.Nome}.jpg"></td>
+                <td>
+                    <h2 style="color:aliceblue ;">
+                        ${element.Nome}
+                    </h2>
+                    <span style="color:aliceblue ;">
+                        ${element.Descricao}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   </span>
+                </td>
+                <td>
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_${element.Nome}">
+                            R$ ${element.Preco}
+                        </span>
+                        <button style="width:100%;" id="bt_${element.Nome}">
+                            Recrutar
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+            
+            `;
+        });
+    </script>
+    <!------------------------------------------------>
+
+
+
+
+    <!------------------------------------------------>
+
+
+
+    <!------------------------------------------------>
+
+
+
+</body>
+<script src="js.js"></script>
+
+<script>
+
+
+
+
+
+    listaMembros.forEach(element => {
+        eval(`
+        const foto_${element.Nome} = document.getElementById('foto_${element.Nome}');
+    const preco_${element.Nome} = document.getElementById('preco_${element.Nome}');
+    const bt_${element.Nome} = document.getElementById('bt_${element.Nome}');
+
+    bt_${element.Nome}.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('desbloqueou_personagem_${element.Nome}')) === 0) {
+            if (parseInt(localStorage.getItem('dinheiro')) >= ${element.Preco}) {
+
+                removeDinheiro(${element.Preco});
+                localStorage.setItem('desbloqueou_personagem_${element.Nome}', '1');
+                msgOk('Membro recrutado com sucesso!');
+                addReputacao(${element.RP})
+                addMembro();
+            }
+            else {
+                msgErro('Voçe não tem dinheiro para comprar esse membro')
+            }
+        }
+        else {
+            msgErro('Voçe ja possue esse membro na sua equipe')
+        }
+    });
+`);
+    });
+
+
+
+
+
+
+    verCompras();
+
+    function verCompras() {
+
+
+        listaMembros.forEach(element => {
+            eval(`
+    if (parseInt(localStorage.getItem('desbloqueou_personagem_${element.Nome}')) === 0) {
+            bt_${element.Nome}.style.backgroundColor = 'green';
+            foto_${element.Nome}.style.filter = 'grayscale(1)';
+
+        }
+        else {
+            bt_${element.Nome}.style.backgroundColor = 'red';
+            foto_${element.Nome}.style.filter = 'none';
+            foto_${element.Nome}.style.border = '5px solid green';
+        }
+        `);
+        });
+        //------------------------------------
+
+        //--------------------- 
+
+
+    }
+
+
+
+
+    setInterval(() => {
+        verCompras();
+    }, 1000);
+
+
+
+
+    function msgOk(msg) {
+        msgbox('Sucesso', msg);
+    }
+    function msgErro(msg) {
+        msgbox('Erro', msg, 1000, 0, 'red');
+    }
+
+</script>
+
+</html>

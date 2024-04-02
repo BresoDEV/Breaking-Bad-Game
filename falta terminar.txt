@@ -1,0 +1,11 @@
+-checks dos trofeus
+-rp ao desbloq trofeus
+-descrição das habilidades dos membros da equipe
+-por valores referentes a reputacao ao recrutar 
+-por o mike na lista da gang
+- terminar calcularDivisaoDeLucros()
+
+
+
+
+   

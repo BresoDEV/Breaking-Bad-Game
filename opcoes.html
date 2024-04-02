@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bBad</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <img class="fundo" src="imagens/Splash.jpeg" alt="">
+
+    <div class="espaco">&nbsp;</div>
+
+    <div class="opcao">
+        <a href="index.html">
+            <h1 id="iniciar" >Voltar</h1>
+        </a>
+    </div>
+    <br>
+    <div class="opcao">
+        <h5 id="dev">Dev Menu</h5></a>
+    </div>
+     
+    <div class="opcao" >
+        <h5 id="dinheiroInfinito">Dinheiro Infinito</h5></a>
+    </div>
+</body>
+<script src="js.js"></script>
+<script>
+    const dev = document.getElementById('dev');
+    const dinheiroInfinito = document.getElementById('dinheiroInfinito');
+
+    dev.addEventListener('click', () => {
+        if (localStorage.getItem('devMode') == '1') {
+            localStorage.setItem('devMode','0');
+        }
+        else{
+            localStorage.setItem('devMode','1');
+        }
+        window.location.reload();
+    });
+
+    dinheiroInfinito.addEventListener('click', () => {
+        if (localStorage.getItem('dinheiroInfinito') == '1') {
+            localStorage.setItem('dinheiroInfinito','0');
+        }
+        else{
+            localStorage.setItem('dinheiroInfinito','1');
+        }
+        window.location.reload();
+    });
+
+    //-------------------------------
+    if (localStorage.getItem('devMode') == '1') {
+           dev.innerHTML ='Dev Menu: <font style="color:yellow">Ativado</font>';
+        }
+        else{
+            dev.innerHTML ='Dev Menu: <font style="color:red">Destivado</font>';
+        }
+    
+
+    if (localStorage.getItem('dinheiroInfinito') == '1') {
+        dinheiroInfinito.innerHTML ='Dinheiro Infinito: <font style="color:yellow">Ativado</font>';
+        }
+        else{
+            dinheiroInfinito.innerHTML ='Dinheiro Infinito: <font style="color:red">Destivado</font>';
+        }
+    
+
+     
+</script>
+
+</html>

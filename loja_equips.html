@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bBad</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<style>
+    .gradeShop button {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: green;
+        color: aliceblue;
+    }
+
+    img {
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+
+    <img class="fundo" src="imagens/Splash.jpeg" alt="">
+
+
+    <div class="opcao">
+        <a href="loja.html">
+            <h1>Voltar</h1>
+        </a>
+    </div>
+
+    <!------------------------------------------------>
+    
+    <!------------------------------------------------>
+    <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_EquipRoupa" src="imagens/Equip/Roupa.jpeg"></td>
+                <td>
+                    <h2 style="color:aliceblue ;">
+                        Roupa
+                    </h2>
+                    <span style="color:aliceblue ;">
+                        Equipamento necessário para cozinhar em qualquer laboratorio
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </td>
+                <td>
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_EquipRoupa">
+                            R$ 50.00
+                        </span>
+                        <button style="width:100%;" id="bt_EquipRoupa">
+                            Comprar
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <!------------------------------------------------>
+    <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_EquipTrailer" src="imagens/Equip/EquipTrailer.jpeg"></td>
+                <td>
+                    <h2 style="color:aliceblue ;">
+                        Equip. Trailer
+                    </h2>
+                    <span style="color:aliceblue ;">
+                        Equipamento necessário para o funcionamento do laboratorio no trailer
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </td>
+                <td>
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_EquipTrailer">
+                            R$ 200.00
+                        </span>
+                        <button style="width:100%;" id="bt_EquipTrailer">
+                            Comprar
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <!------------------------------------------------>
+    <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_MatPrima" src="imagens/Misc/Meth.png"></td>
+                <td>
+                    <h2 style="color:aliceblue ;">
+                        Materia Prima
+                    </h2>
+                    <span style="color:aliceblue ;">
+                        Necessário para cozinhar em qualquer laboratorio
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </td>
+                <td>
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_MatPrima">
+                            R$ 50.00
+                        </span>
+                        <button style="width:100%;" id="bt_MatPrima">
+                            Comprar
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <!------------------------------------------------>
+
+    <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_EquipClandestino"
+                        src="imagens/Equip/EquipClandestino.jpeg"></td>
+                <td>
+                    <h2 style="color:aliceblue ;">
+                        Equip. Clandestino
+                    </h2>
+                    <span style="color:aliceblue ;">
+                        Equipamento necessário para o funcionamento do laboratorio clandestino
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </td>
+                <td>
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_EquipClandestino">
+                            R$ 500.00
+                        </span>
+                        <button style="width:100%;" id="bt_EquipClandestino">
+                            Comprar
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <br>
+    <!------------------------------------------------>
+
+    <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_EquipFumegacao" src="imagens/Equip/EquipFumegacao.jpeg">
+                </td>
+                <td>
+                    <h2 style="color:aliceblue ;">
+                        Equip. Fumegação
+                    </h2>
+                    <span style="color:aliceblue ;">
+                        Equipamento necessário para o funcionamento do laboratorio de fumegação
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </td>
+                <td>
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_EquipFumegacao">
+                            R$ 1000.00
+                        </span>
+                        <button style="width:100%;" id="bt_EquipFumegacao">
+                            Comprar
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <!------------------------------------------------>
+
+    <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_EquipGus" src="imagens/Equip/EquipGus.jpeg"></td>
+                <td>
+                    <h2 style="color:aliceblue ;">
+                        Equip. Gus
+                    </h2>
+                    <span style="color:aliceblue ;">
+                        Equipamento necessário para o funcionamento do laboratorio do Gus
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    </span>
+                </td>
+                <td>
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_EquipGus">
+                            R$ 2000.00
+                        </span>
+                        <button style="width:100%;" id="bt_EquipGus">
+                            Comprar
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+
+    <!------------------------------------------------>
+
+
+
+    <div class="gradeShop">
+        <table style="width:100%;">
+            <tr>
+                <td><img alt="" style="width:100px;" id="foto_EquipMetilamina" src="imagens/Equip/Metilamina.jpeg"></td>
+                <td>
+                    <h2 style="color:aliceblue ;">
+                        Metilamina
+                    </h2>
+                    <span style="color:aliceblue ;">
+                        Adiciona 10 litros de Metilamina ao inventário
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </td>
+                <td>
+                    <center>
+                        <span style="color:aliceblue ;" id="preco_EquipMetilamina">
+                            R$ 500.00
+                        </span>
+                        <button style="width:100%;" id="bt_EquipMetilamina">
+                            Comprar
+                        </button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+
+    <!------------------------------------------------>
+
+
+
+</body>
+<script src="js.js"></script>
+
+<script>
+    const foto_EquipClandestino = document.getElementById('foto_EquipClandestino');
+    const preco_EquipClandestino = document.getElementById('preco_EquipClandestino');
+    const bt_EquipClandestino = document.getElementById('bt_EquipClandestino');
+
+
+    const foto_EquipFumegacao = document.getElementById('foto_EquipFumegacao');
+    const preco_EquipFumegacao = document.getElementById('preco_EquipFumegacao');
+    const bt_EquipFumegacao = document.getElementById('bt_EquipFumegacao');
+
+
+    const foto_EquipGus = document.getElementById('foto_EquipGus');
+    const preco_EquipGus = document.getElementById('preco_EquipGus');
+    const bt_EquipGus = document.getElementById('bt_EquipGus');
+
+
+    const foto_EquipTrailer = document.getElementById('foto_EquipTrailer');
+    const preco_EquipTrailer = document.getElementById('preco_EquipTrailer');
+    const bt_EquipTrailer = document.getElementById('bt_EquipTrailer');
+
+
+
+    const foto_EquipMetilamina = document.getElementById('foto_EquipMetilamina');
+    const preco_EquipMetilamina = document.getElementById('preco_EquipMetilamina');
+    const bt_EquipMetilamina = document.getElementById('bt_EquipMetilamina');
+
+
+
+    const foto_EquipRoupa = document.getElementById('foto_EquipRoupa');
+    const preco_EquipRoupa = document.getElementById('preco_EquipRoupa');
+    const bt_EquipRoupa = document.getElementById('bt_EquipRoupa');
+
+
+
+    const foto_MatPrima = document.getElementById('foto_MatPrima');
+    const preco_MatPrima = document.getElementById('preco_MatPrima');
+    const bt_MatPrima = document.getElementById('bt_MatPrima');
+
+
+
+
+    //---------------------------------------------
+    bt_MatPrima.addEventListener('click', () => {
+        if (localStorage.getItem('labAtual') !== 'Nenhum') {
+            if (parseInt(localStorage.getItem('dinheiro')) >= 50) {
+                if (addMateriaPrima(2)) {
+                    removeDinheiro(50);
+                    msgOk('Item comprado com sucesso!')
+                } else {
+                    msgErro('Deposito cheio')
+                }
+
+            }
+            else {
+                msgErro('Voçe não tem dinheiro para comprar esse item')
+            }
+        }
+        else {
+            msgErro('Voçe não possue um laboratório')
+        }
+    });
+
+    //---------------------------------------------
+    bt_EquipRoupa.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('jaComprou_Roupa')) === 0) {
+            if (parseInt(localStorage.getItem('dinheiro')) >= 50) {
+                removeDinheiro(50);
+                localStorage.setItem('jaComprou_Roupa', '1');
+                msgOk('Item comprado com sucesso!')
+            }
+            else {
+                msgErro('Voçe não tem dinheiro para comprar esse item')
+            }
+        }
+        else {
+            msgErro('Voçe ja possue esse item')
+        }
+    });
+
+
+    //---------------------------------------------
+    bt_EquipTrailer.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Trailer')) === 0) {
+            if (parseInt(localStorage.getItem('dinheiro')) >= 200) {
+                if (parseInt(localStorage.getItem('jaComprou_Lab_Trailer')) === 1) {
+                    removeDinheiro(200);
+                    localStorage.setItem('jaComprou_Equip_Lab_Trailer', '1');
+                    localStorage.setItem('labAtual', 'Trailer');
+                    msgOk('Item comprado com sucesso!');
+
+                    var capItem = localStorage.getItem('capacidade_Lab_Trailer');
+                    localStorage.setItem('capacidade_Max_labAtual', capItem);
+
+                }
+                else {
+                    msgErro('Voçe precisa do laboratorio para comprar esse item')
+                }
+            }
+            else {
+                msgErro('Voçe não tem dinheiro para comprar esse item')
+            }
+        }
+        else {
+            msgErro('Voçe ja possue esse item')
+        }
+    });
+
+
+    //---------------------------------------------
+    bt_EquipClandestino.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Clandestino')) === 0) {
+            if (parseInt(localStorage.getItem('dinheiro')) >= 500) {
+                if (parseInt(localStorage.getItem('jaComprou_Lab_Clandestino')) === 1) {
+                    removeDinheiro(500);
+                    localStorage.setItem('jaComprou_Equip_Lab_Clandestino', '1');
+                    localStorage.setItem('labAtual', 'Clandestino');
+                    msgOk('Item comprado com sucesso!')
+
+                    var capItem = localStorage.getItem('capacidade_Lab_Clandestino');
+                    localStorage.setItem('capacidade_Max_labAtual', capItem);
+                }
+                else {
+                    msgErro('Voçe precisa do laboratorio clandestino para comprar esse item')
+                }
+            }
+            else {
+                msgErro('Voçe não tem dinheiro para comprar esse item')
+            }
+        }
+        else {
+            msgErro('Voçe ja possue esse item')
+        }
+    });
+
+
+    //-------------------------------------------
+    bt_EquipFumegacao.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Fumegacao')) === 0) {
+            if (parseInt(localStorage.getItem('dinheiro')) >= 1000) {
+                if (parseInt(localStorage.getItem('jaComprou_Lab_Fumegacao')) === 1) {
+                    removeDinheiro(1000);
+                    localStorage.setItem('jaComprou_Equip_Lab_Fumegacao', '1');
+                    localStorage.setItem('labAtual', 'Fumegação');
+                    msgOk('Item comprado com sucesso!')
+
+                    var capItem = localStorage.getItem('capacidade_Lab_Fumegacao');
+                    localStorage.setItem('capacidade_Max_labAtual', capItem);
+                }
+                else {
+                    msgErro('Voçe precisa do laboratorio de fumegação para comprar esse item')
+                }
+            }
+            else {
+                msgErro('Voçe não tem dinheiro para comprar esse item')
+            }
+        }
+        else {
+            msgErro('Voçe ja possue esse item')
+        }
+    });
+
+
+    //-------------------------------------------
+    bt_EquipGus.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_GusLab')) === 0) {
+            if (parseInt(localStorage.getItem('dinheiro')) >= 2000) {
+                if (parseInt(localStorage.getItem('jaComprou_Lab_GusLab')) === 1) {
+                    removeDinheiro(2000);
+                    localStorage.setItem('jaComprou_Equip_Lab_GusLab', '1');
+                    localStorage.setItem('capacidade_Max_labAtualAzul', '1200');
+                    localStorage.setItem('labAtual', 'Gus');
+                    msgOk('Item comprado com sucesso!')
+
+                    var capItem = localStorage.getItem('capacidade_Lab_GusLab');
+                    localStorage.setItem('capacidade_Max_labAtual', capItem);
+                }
+                else {
+                    msgErro('Voçe precisa do laboratorio do Gus para comprar esse item')
+                }
+            }
+            else {
+                msgErro('Voçe não tem dinheiro para comprar esse item')
+            }
+        }
+        else {
+            msgErro('Voçe ja possue esse item')
+        }
+    });
+    //-------------------------------------------
+
+    bt_EquipMetilamina.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_GusLab')) === 1) {
+            if (parseInt(localStorage.getItem('dinheiro')) >= 500) {
+                if (parseInt(localStorage.getItem('estoque_metilamina')) === 0) {
+                    if (parseInt(localStorage.getItem('jaComprou_Lab_GusLab')) === 1) {
+                        removeDinheiro(500);
+
+                        msgOk('Item comprado com sucesso!')
+
+                        addMetilamina(10);
+                    }
+                    else {
+                        msgErro('Voçe precisa do laboratorio do Gus para comprar esse item')
+                    }
+                }
+                else {
+                    msgErro('Seu estoque esta cheio')
+                }
+            }
+            else {
+                msgErro('Voçe não tem dinheiro para comprar esse item')
+            }
+        }
+        else {
+            msgErro('Voçe precisa do equipamento do laboratorio do Gus para comprar esse item')
+        }
+    });
+
+
+    verCompras();
+
+    function verCompras() {
+        if (parseInt(localStorage.getItem('jaComprou_Roupa')) === 0) {
+            bt_EquipRoupa.style.backgroundColor = 'green';
+            foto_EquipRoupa.style.filter = 'grayscale(1)';
+        }
+        else {
+            bt_EquipRoupa.style.backgroundColor = 'red';
+            foto_EquipRoupa.style.filter = 'none';
+            foto_EquipRoupa.style.border = '3px solid lime';
+        }
+        //------------------------------------
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Trailer')) === 0) {
+            bt_EquipTrailer.style.backgroundColor = 'green';
+            foto_EquipTrailer.style.filter = 'grayscale(1)';
+        }
+        else {
+            bt_EquipTrailer.style.backgroundColor = 'red';
+            foto_EquipTrailer.style.filter = 'none';
+            foto_EquipTrailer.style.border = '3px solid lime';
+        }
+        //------------------------------------ 
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Clandestino')) === 0) {
+            bt_EquipClandestino.style.backgroundColor = 'green';
+            foto_EquipClandestino.style.filter = 'grayscale(1)';
+        }
+        else {
+            bt_EquipClandestino.style.backgroundColor = 'red';
+            foto_EquipClandestino.style.filter = 'none';
+            foto_EquipClandestino.style.border = '3px solid lime';
+        }
+        //------------------------------------
+
+
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Fumegacao')) === 0) {
+            bt_EquipFumegacao.style.backgroundColor = 'green';
+            foto_EquipFumegacao.style.filter = 'grayscale(1)';
+        }
+        else {
+            bt_EquipFumegacao.style.backgroundColor = 'red';
+            foto_EquipFumegacao.style.filter = 'none';
+            foto_EquipFumegacao.style.border = '3px solid lime';
+        }
+        //------------------------------------
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_GusLab')) === 0) {
+            bt_EquipGus.style.backgroundColor = 'green';
+            foto_EquipGus.style.filter = 'grayscale(1)';
+        }
+        else {
+            bt_EquipGus.style.backgroundColor = 'red';
+            foto_EquipGus.style.filter = 'none';
+            foto_EquipGus.style.border = '3px solid lime';
+        }
+
+        //------------------------------------
+        if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_GusLab')) === 1) {
+            bt_EquipMetilamina.style.backgroundColor = 'green';
+            foto_EquipMetilamina.style.filter = 'none';
+        }
+        else {
+            bt_EquipMetilamina.style.backgroundColor = 'red';
+            foto_EquipMetilamina.style.filter = 'grayscale(1)';
+            //foto_EquipMetilamina.style.border = '3px solid lime';
+        }
+
+        //------------------------------------
+        if (localStorage.getItem('labAtual') !== 'Nenhum') {
+            bt_EquipMetilamina.style.backgroundColor = 'green';
+            foto_EquipMetilamina.style.filter = 'none';
+        }
+        else {
+            bt_EquipMetilamina.style.backgroundColor = 'red';
+            foto_EquipMetilamina.style.filter = 'grayscale(1)';
+            //foto_EquipMetilamina.style.border = '3px solid lime';
+        }
+
+
+    }
+
+
+
+
+    setInterval(() => {
+        verCompras();
+    }, 1000);
+
+
+
+
+    function msgOk(msg) {
+        msgbox('Sucesso', msg);
+    }
+    function msgErro(msg) {
+        msgbox('Erro', msg, 1000, 0, 'red');
+    }
+
+</script>
+
+</html>

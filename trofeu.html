@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bBad</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <img class="fundo" src="imagens/Splash.jpeg" alt="">
+
+    <div class="espaco">&nbsp;</div>
+
+    <div class="opcao">
+        <a href="index.html">
+            <h1 id="voltar">Voltar</h1>
+        </a>
+    </div>
+<br><br>
+    
+<div class="trofeu">
+    <center>
+        <img id="trofeuBloqueado1" src="imagens/Trofeu/1.jpg" alt="">
+        <img id="trofeuBloqueado2" src="imagens/Trofeu/2.jpg" alt="">
+        <img id="trofeuBloqueado3" src="imagens/Trofeu/3.jpg" alt="">
+        <img id="trofeuBloqueado4" src="imagens/Trofeu/4.jpg" alt="">
+        <img id="trofeuBloqueado5" src="imagens/Trofeu/5.jpg" alt="">
+        <img id="trofeuBloqueado6" src="imagens/Trofeu/6.jpg" alt="">
+        <img id="trofeuBloqueado7" src="imagens/Trofeu/7.jpg" alt="">
+        <img id="trofeuBloqueado8" src="imagens/Trofeu/8.jpg" alt="">
+        <img id="trofeuBloqueado9" src="imagens/Trofeu/9.jpg" alt="">
+    </center>
+</div>
+<div class="trofeu">
+    <center>
+
+        <img id="trofeuBloqueado10" src="imagens/Trofeu/10.jpg" alt="">
+        <img id="trofeuBloqueado11" src="imagens/Trofeu/11.jpg" alt="">
+        <img id="trofeuBloqueado12" src="imagens/Trofeu/12.jpg" alt="">
+        <img id="trofeuBloqueado13" src="imagens/Trofeu/13.jpg" alt="">
+        <img id="trofeuBloqueado14" src="imagens/Trofeu/14.jpg" alt="">
+        <img id="trofeuBloqueado15" src="imagens/Trofeu/15.jpg" alt="">
+        <img id="trofeuBloqueado16" src="imagens/Trofeu/16.jpg" alt="">
+        <img id="trofeuBloqueado17" src="imagens/Trofeu/17.jpg" alt="">
+    </center>
+</div>
+
+
+</body>
+<script src="js.js"></script>
+<script>
+
+
+
+    for (let index = 1; index < 18; index++) {
+        var t = document.getElementById('trofeuBloqueado'+index);
+
+        t.title = localStorage.getItem('descricao_trofeu_'+index);
+        
+        if(localStorage.getItem('desbloqueou_trofeu_'+index) == 0)
+        {
+            t.style.filter = 'grayscale(1)';
+            t.style.border = '10px solid red';
+        }
+        else
+        {
+            t.style.border = '10px solid green';
+           
+        }
+    }
+
+
+    //trofeus removidos
+    document.getElementById('trofeuBloqueado5').remove();
+    document.getElementById('trofeuBloqueado6').remove();
+    document.getElementById('trofeuBloqueado8').remove();
+    document.getElementById('trofeuBloqueado10').remove();
+    document.getElementById('trofeuBloqueado15').remove();
+   
+
+</script>
+
+</html>

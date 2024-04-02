@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bBad</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <img class="fundo" src="imagens/Splash.jpeg" alt="">
+
+
+
+    <div class="gradePrincipal">
+        <img class="fotoPerfil" alt="" id="fotoPerfil">
+        <table>
+            <tr>
+                <td id="level">Level:0</td>
+            </tr>
+            <tr>
+                <td id="reputacao">Reputação:0</td>
+            </tr>
+            <tr>
+                <td id="dinheiro">Dinheiro:0</td>
+            </tr>
+            <tr>
+                <td id="vendas">Vendas:0</td>
+            </tr>
+        </table>
+
+
+
+
+        <table style="margin-left: 20px;">
+            <tr>
+                <td><a href="loja.html"><button>Acessar Loja</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="iniciarProd">Iniciar Produção</button></td>
+            </tr>
+            <tr>
+                <td><button id="iniciarProdAzul">Iniciar Produção Azul</button></td>
+            </tr>
+            <tr>
+                <td id="">&nbsp;</td>
+            </tr>
+        </table>
+        
+        <table style="margin-left: 20px;">
+            <tr>
+                <td><a href="vender.html"><button>Vender Produtos</button></a></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="">&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+
+    <div class="gradePrincipal">
+
+
+        <table>
+            <tr>
+                <td style="width:40%;padding-right: 5px;" rowspan="10"><img alt="" style="width:100%;"
+                        id="fotoLabAtual"></a></td>
+                <td colspan="2"><span id="info"></span></td>
+
+            </tr>
+            <tr>
+                <td id="labAtual">Lab Atual: 0</td>
+            </tr>
+            <tr>
+                <td id="membrosEquipe">Membros na Equipe: 0</td>
+            </tr>
+            <tr>
+                <td style="width:20%"><span id="materiaPrima">materiaPrima: 0</span></td>
+                <td><progress class="pprogress" id="barra_materiaPrima"></progress></td>
+            </tr>
+            <tr>
+                <td style="width:20%"><span id="metilamina">Metilamina: 0</span></td>
+                <td><progress class="pprogress" id="barra_estoque_metilamina"></progress></td>
+            </tr>
+            <tr>
+                <td style="width:30%"><span id="estoque_meth_normal">Estoque Normal: </span></td>
+                <td><progress class="pprogress" id="barraestoque_meth_normal"></progress></td>
+            </tr>
+            <tr>
+                <td style="width:20%"><span id="estoque_meth_azul">Estoque Azul: </span></td>
+                <td><progress class="pprogress" id="barrestoque_meth_azul"></progress></td>
+
+            </tr>
+
+        </table>
+    </div>
+
+
+
+</body>
+<script src="js.js"></script>
+<script>
+
+    const level = document.getElementById('level');
+    const dinheiro = document.getElementById('dinheiro');
+    const reputacao = document.getElementById('reputacao');
+    const vendas = document.getElementById('vendas');
+    const fotoPerfil = document.getElementById('fotoPerfil');
+    const membrosEquipe = document.getElementById('membrosEquipe');
+    const labAtual = document.getElementById('labAtual');
+    const barraestoque_meth_normal = document.getElementById('barraestoque_meth_normal');
+    const estoque_meth_normal = document.getElementById('estoque_meth_normal');
+    const estoque_meth_azul = document.getElementById('estoque_meth_azul');
+    const barrestoque_meth_azul = document.getElementById('barrestoque_meth_azul');
+
+
+    const fotoLabAtual = document.getElementById('fotoLabAtual');
+    fotoLabAtual.src = obterFotoLab();
+
+
+    //estoque_metilamina
+    const metilamina = document.getElementById('metilamina');
+    const barra_estoque_metilamina = document.getElementById('barra_estoque_metilamina');
+
+    //materiaPrima
+    const materiaPrima = document.getElementById('materiaPrima');
+    const barra_materiaPrima = document.getElementById('barra_materiaPrima');
+
+
+    const info = document.getElementById('info');
+
+    attDados();
+
+    setInterval(() => {
+        barraestoque_meth_normal.value = localStorage.getItem('estoque_meth_normal');
+        barraestoque_meth_normal.max = localStorage.getItem('capacidade_Max_labAtual');
+        estoque_meth_normal.innerHTML = 'Estoque Normal: ' + localStorage.getItem('estoque_meth_normal') + '/' + localStorage.getItem('capacidade_Max_labAtual');
+
+        barrestoque_meth_azul.value = localStorage.getItem('estoque_meth_azul');
+        barrestoque_meth_azul.max = localStorage.getItem('capacidade_Max_labAtualAzul');
+        estoque_meth_azul.innerHTML = 'Estoque Azul:&nbsp;&nbsp;&nbsp;&nbsp;' + localStorage.getItem('estoque_meth_azul') + '/' + localStorage.getItem('capacidade_Max_labAtualAzul');
+
+
+
+        barra_estoque_metilamina.value = localStorage.getItem('estoque_metilamina');
+        barra_estoque_metilamina.max = 10;
+        metilamina.innerHTML = 'Metilamina ' + localStorage.getItem('estoque_metilamina') + '/10';
+
+
+        barra_materiaPrima.value = localStorage.getItem('materiaPrima');
+        barra_materiaPrima.max = 10;
+        materiaPrima.innerHTML = 'Materia Prima ' + localStorage.getItem('materiaPrima') + '/10';
+
+
+    }, 1);
+
+    setInterval(() => {
+        attDados();
+    }, 10000);
+
+//------------------------------------------
+    const iniciarProd = document.getElementById('iniciarProd');
+    const iniciarProdAzul = document.getElementById('iniciarProdAzul');
+
+    if (parseInt(localStorage.getItem('emProducao_normal')) === 1) {
+        iniciarProd.style.backgroundColor = 'yellow';
+        iniciarProd.style.color = 'black';
+        iniciarProd.innerHTML = 'Parar Produção';
+    }
+    else {
+        iniciarProd.innerHTML = 'Iniciar Produção';
+    }
+    //---------------------
+    if (parseInt(localStorage.getItem('emProducao_azul')) === 1) {
+        iniciarProdAzul.style.backgroundColor = 'yellow';
+        iniciarProdAzul.style.color = 'black';
+        iniciarProdAzul.innerHTML = 'Parar Produção';
+    }
+    else {
+        iniciarProdAzul.innerHTML = 'Iniciar Produção Azul';
+    }
+
+//------------------------------------------
+    if (parseInt(localStorage.getItem('jaComprou_Lab_GusLab')) === 0){
+        iniciarProdAzul.remove();
+    }
+//------------------------------------------
+    iniciarProd.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('emProducao_normal')) === 1) {
+            localStorage.setItem('emProducao_normal', '0');
+            //localStorage.setItem('emProducao_azul', '0');
+        }
+        else {
+            localStorage.setItem('emProducao_normal', '1');
+           // localStorage.setItem('emProducao_azul', '0');
+        }
+        window.location.reload();
+    })
+
+
+    iniciarProdAzul.addEventListener('click', () => {
+        if (parseInt(localStorage.getItem('emProducao_azul')) === 1) {
+            //localStorage.setItem('emProducao_normal', '0');
+            localStorage.setItem('emProducao_azul', '0');
+        }
+        else {
+            localStorage.setItem('emProducao_azul', '1');
+        }
+        window.location.reload();
+    })
+
+
+    function attDados() {
+        level.innerHTML = 'Level: ' + localStorage.getItem('level');
+        dinheiro.innerHTML = 'Dinheiro: R$ ' + localStorage.getItem('dinheiro');
+        reputacao.innerHTML = 'Reputação: ' + localStorage.getItem('reputacao');
+        vendas.innerHTML = 'Vendas: ' + localStorage.getItem('vendas');
+        membrosEquipe.innerHTML = 'Membros na Equipe: ' + localStorage.getItem('membrosEquipe');
+        labAtual.innerHTML = 'Lab Atual: ' + localStorage.getItem('labAtual');
+
+
+        //estoque meth normal
+        barraestoque_meth_normal.value = localStorage.getItem('estoque_meth_normal');
+        barraestoque_meth_normal.max = localStorage.getItem('capacidade_Max_labAtual');
+        estoque_meth_normal.innerHTML = 'Estoque Normal: ' + localStorage.getItem('estoque_meth_normal') + '/' + localStorage.getItem('capacidade_Max_labAtual');
+
+        fotoPerfil.src = obterFotoPerfil();
+    }
+
+
+    if (parseInt(localStorage.getItem('jaComprou_Roupa')) === 1) {
+
+
+        if (parseInt(localStorage.getItem('jaComprou_Lab_Clandestino')) === 1) {
+            if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Clandestino')) === 1) {
+                info.innerHTML = '<font style="color:lime">Laboratorio completo.</font>'
+            }
+            else {
+                info.innerHTML = '<font style="color:red">Laboratorio sem equipamentos. Compre acessando a loja</font>'
+            }
+        }
+
+        else if (parseInt(localStorage.getItem('jaComprou_Lab_Fumegacao')) === 1) {
+            if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Fumegacao')) === 1) {
+                info.innerHTML = '<font style="color:lime">Laboratorio completo.</font>'
+            }
+            else {
+                info.innerHTML = '<font style="color:red">Laboratorio sem equipamentos. Compre acessando a loja</font>'
+            }
+        }
+
+
+        else if (parseInt(localStorage.getItem('jaComprou_Lab_GusLab')) === 1) {
+            if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_GusLab')) === 1) {
+                info.innerHTML = '<font style="color:lime">Laboratorio completo.</font>'
+            }
+            else {
+                info.innerHTML = '<font style="color:red">Laboratorio sem equipamentos. Compre acessando a loja</font>'
+            }
+        }
+
+
+
+        else if (parseInt(localStorage.getItem('jaComprou_Lab_Trailer')) === 1) {
+            if (parseInt(localStorage.getItem('jaComprou_Equip_Lab_Trailer')) === 1) {
+                info.innerHTML = '<font style="color:lime">Laboratorio completo.</font>'
+            }
+            else {
+                info.innerHTML = '<font style="color:red">Laboratorio sem equipamentos. Compre acessando a loja</font>'
+            }
+        }
+
+
+
+        else {
+            info.innerHTML = '<font style="color:red">Sem Laboratorio. Compre acessando a loja</font>'
+        }
+    }
+    else {
+        info.innerHTML = '<font style="color:red">Sem roupa de proteção. Compre acessando a loja</font>'
+    }
+
+
+
+
+
+</script>
+
+</html>
