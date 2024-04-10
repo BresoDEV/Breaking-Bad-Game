@@ -4,7 +4,7 @@
 -por valores referentes a reputacao ao recrutar 
 -por o mike na lista da gang
 - terminar calcularDivisaoDeLucros()
-
+-por pra detectar se o texto ta LABORATORIO COMPLETO pra iniciar a producao e venda
 
 
 
