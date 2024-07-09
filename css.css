@@ -5,6 +5,8 @@
     color: rgb(0, 0, 0);
     font-family: Georgia, 'Times New Roman', Times, serif;
     word-spacing: 3px;
+    -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
 }
 
 .pprogress{
